@@ -3,13 +3,10 @@ import {Link} from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import {Flex, Box} from '@rebass/grid/emotion';
+import logo from '../../images/logo.png';
+import cart from '../../images/cart.png';
 
 import StoreContext from '../../context/StoreContext';
-
-const Wrapper = styled.div({
-	background: 'rebeccapurple',
-	marginBottom: '1.45rem'
-});
 
 const CartCounter = styled.span({
 	backgroundColor: 'white',
@@ -22,58 +19,55 @@ const CartCounter = styled.span({
 	zIndex: 999
 });
 
-const H1 = props => (
-	<h1
-		style={{
-			margin: 0
-		}}
-	>
-		<Link
-			{...props}
-			style={{
-				color: 'white',
-				textDecoration: 'none'
-			}}
-		>
-			{props.children}
-		</Link>
-	</h1>
-);
-
-const Container = props => (
-	<Flex
-		{...props}
-		mx="auto"
-		px={['1.0875rem', null, null, 0]}
-		py="1.45rem"
-		css={{
-			margin: '0 auto',
-			maxWidth: 960
-		}}
-	/>
-);
-
 const Header = ({siteTitle}) => {
 	const context = useContext(StoreContext);
 
 	const {lineItems} = context.checkout;
 
 	return (
-		<Wrapper>
-			<Container>
-				<Box>
-					<H1 to="/">{siteTitle}</H1>
-				</Box>
-				<Box ml="auto">
-					<H1 to="/cart">
-						{lineItems.length !== 0 && (
-							<CartCounter>{lineItems.length}</CartCounter>
-						)}
-						Cart 🛍
-					</H1>
-				</Box>
-			</Container>
-		</Wrapper>
+		<Flex
+			flexDirection="row"
+			alignItems="center"
+			justifyContent="space-between"
+			width="100%"
+			css={{
+				backgroundColor: 'transparent',
+				height: '100px',
+				position: 'absolute',
+				zIndex: 10
+			}}
+		>
+			<Box p={5} ml={20}>
+				<Link to="/">
+					<img src={logo} css={{height: '80px'}} />
+				</Link>
+			</Box>
+			<Box mr={20}>
+				<Link
+					to="/"
+					css={{
+						color: 'white',
+						fontFamily: 'Montserrat,sans-serif',
+						fontWeight: 600,
+						letterSpacing: '0.1em',
+						textDecoration: 'none',
+						textTransform: 'uppercase',
+						'&.visited': {
+							color: 'white',
+							textDecoration: 'none'
+						}
+					}}
+				>
+					Collections
+				</Link>
+				<Link to="/cart">
+					<img src={cart} css={{height: '20px'}}></img>
+					{lineItems.length !== 0 && (
+						<CartCounter>{lineItems.length}</CartCounter>
+					)}
+				</Link>
+			</Box>
+		</Flex>
 	);
 };
 
