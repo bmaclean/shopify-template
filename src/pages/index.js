@@ -4,6 +4,7 @@ import {Flex, Box} from '@rebass/grid/emotion';
 import {Copy, CTAButton, SEO, SubscriptionInput} from '../components';
 
 import BackgroundImage from '../images/xbox-background.png';
+import LogoImage from '../images/styled-background-logo.png';
 
 const IndexPage = ({image}) => (
 	<>
@@ -75,13 +76,12 @@ const IndexPage = ({image}) => (
 					flexDirection="column"
 				>
 					<h2>Claim your console identity.</h2>
-					<p>It&apos;s time to take action and</p> <br />
+					<p>It&apos;s time to take action and...</p> <br />
 					<CTAButton to="/shop">Style your console</CTAButton>
 				</Flex>
 			</Copy>
 			<Box>
-				{/* TODO: image */}
-				<img css={{height: '350px'}} src={BackgroundImage} />
+				<img css={{height: '350px'}} src={LogoImage} />
 			</Box>
 		</Flex>
 		<Copy>

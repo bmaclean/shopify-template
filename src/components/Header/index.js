@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import {Flex, Box} from '@rebass/grid/emotion';
 
 import StoreContext from '../../context/StoreContext';
-import logo from '../../images/logo.png';
+import logo from '../../images/white-logo.png';
 import cart from '../../images/cart.png';
 
 const CartCounter = styled.span({
