@@ -17,10 +17,10 @@ const CartCounter = styled.span({
 	textDecoration: 'none',
 	float: 'right',
 	margin: '-10px',
-	zIndex: 999,
+	zIndex: 999
 });
 
-const Header = ({siteTitle}) => {
+const Header = () => {
 	const context = useContext(StoreContext);
 
 	const {lineItems} = context.checkout;
@@ -47,6 +47,8 @@ const Header = ({siteTitle}) => {
 				<Link
 					to="/"
 					css={{
+						display: 'flex',
+						alignItems: 'center',
 						color: 'white',
 						fontFamily: 'Montserrat,sans-serif',
 						fontWeight: 600,
@@ -60,17 +62,23 @@ const Header = ({siteTitle}) => {
 						}
 					}}
 				>
-					Collections
+					Shop
 				</Link>
 				<Link to="/cart">
 					<Flex alignItems="center">
 						<img src={cart} css={{height: '20px'}}></img>
 						{lineItems.length !== 0 && (
-							<CartCounter css={{marginLeft: '8px', 
-	'&.visited': {
-		color: 'black',
-		textDecoration: 'none'
-	}}}>{lineItems.length}</CartCounter>
+							<CartCounter
+								css={{
+									marginLeft: '8px',
+									'&.visited': {
+										color: 'black',
+										textDecoration: 'none'
+									}
+								}}
+							>
+								{lineItems.length}
+							</CartCounter>
 						)}
 					</Flex>
 				</Link>
