@@ -6,6 +6,8 @@ import StoreContext, {defaultStoreContext} from '../context/StoreContext';
 import Header from '../components/Header';
 import {GlobalStyle} from '../utils/styles';
 
+import GatsbyIcon from '../images/gatsby-icon.png';
+
 class Layout extends React.Component {
 	state = {
 		store: {
@@ -138,9 +140,11 @@ class Layout extends React.Component {
 							<Header siteTitle={data.site.siteMetadata.title} />
 							<div>
 								{children}
-								<footer>
-									© {new Date().getFullYear()}, Built with{' '}
-									<a href="https://www.gatsbyjs.org">Gatsby</a>
+								<footer css={{margin: '8px', textAlign: 'center'}}>
+									© {new Date().getFullYear()}, Powered by{'  '}
+									<a href="https://www.gatsbyjs.org">
+										<img src={GatsbyIcon} css={{height: '1em'}} />
+									</a>
 								</footer>
 							</div>
 						</>
