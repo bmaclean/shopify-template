@@ -91,7 +91,7 @@ const IndexPage = ({image}) => (
 				flexDirection="column"
 				css={{
 					height: '24em',
-					clipPath: 'polygon(0 0, 100% 8%, 100% 100%, 0 100%)'
+					background: '#f2f2f2'
 				}}
 			>
 				<h2>Don&apos;t miss out on exclusive offers.</h2>
@@ -100,7 +100,7 @@ const IndexPage = ({image}) => (
 					Subscribe to our emails for exclusive access to promotions and
 					discounts.
 				</p>
-				<SubscriptionInput />
+				<SubscriptionInput css={{marginTop: '2em'}} /> 
 			</Flex>
 		</Copy>
 	</>
