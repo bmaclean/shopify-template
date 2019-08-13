@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 
 // Call To Action button
 
+// TODO: Themeing
+
 const CTAButton = styled(Link)`
 	color: #ffffff;
 	background-color: #d71111;
@@ -16,6 +18,9 @@ const CTAButton = styled(Link)`
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
+	&:hover {
+		background: #bf0f0f;
+	}
 `;
 
 export default CTAButton;
