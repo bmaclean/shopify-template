@@ -5,10 +5,11 @@ import {Copy, CTAButton, SEO, SubscriptionInput} from '../components';
 
 import BackgroundImage from '../images/xbox-background.png';
 import LogoImage from '../images/styled-background-logo.png';
+import {CenteredFlex} from '../components/ui';
 
 const IndexPage = ({image}) => (
 	<>
-		<SEO title="Home" keywords={['gatsby', 'application', 'react']} />
+		<SEO title="Home" keywords={['console style', 'console skins']} />
 		<div
 			css={{
 				backgroundImage: `linear-gradient(#101010, transparent 200%), url(${BackgroundImage})`,
@@ -37,12 +38,10 @@ const IndexPage = ({image}) => (
 			</div>
 		</div>
 		<Copy>
-			<Flex
+			<CenteredFlex
 				css={{
 					height: '28em'
 				}}
-				justifyContent="center"
-				alignItems="center"
 				flexDirection="column"
 			>
 				<h1>Why ConsoleStyle?</h1>
@@ -57,7 +56,7 @@ const IndexPage = ({image}) => (
 				</p>
 
 				<p>Don&apos;t let your console stay bland. Give it ConsoleStyle.</p>
-			</Flex>
+			</CenteredFlex>
 		</Copy>
 		<Flex
 			alignItems="center"
@@ -85,12 +84,10 @@ const IndexPage = ({image}) => (
 			</Box>
 		</Flex>
 		<Copy>
-			<Flex
-				alignItems="center"
-				justifyContent="center"
+			<CenteredFlex
 				flexDirection="column"
 				css={{
-					height: '24em',
+					height: '32em',
 					background: '#f2f2f2'
 				}}
 			>
@@ -100,8 +97,8 @@ const IndexPage = ({image}) => (
 					Subscribe to our emails for exclusive access to promotions and
 					discounts.
 				</p>
-				<SubscriptionInput css={{marginTop: '2em'}} /> 
-			</Flex>
+				<SubscriptionInput css={{marginTop: '2em'}} />
+			</CenteredFlex>
 		</Copy>
 	</>
 );

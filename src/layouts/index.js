@@ -6,7 +6,7 @@ import StoreContext, {defaultStoreContext} from '../context/StoreContext';
 import Header from '../components/Header';
 import {GlobalStyle} from '../utils/styles';
 
-import GatsbyIcon from '../images/gatsby-icon.png';
+// import GatsbyIcon from '../images/gatsby-icon.png';
 
 class Layout extends React.Component {
 	state = {
