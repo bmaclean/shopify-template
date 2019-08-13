@@ -140,12 +140,12 @@ class Layout extends React.Component {
 							<Header siteTitle={data.site.siteMetadata.title} />
 							<div>
 								{children}
-								<footer css={{margin: '8px', textAlign: 'center'}}>
+								{/* <footer css={{margin: '8px', textAlign: 'center'}}>
 									© {new Date().getFullYear()}, Powered by{'  '}
 									<a href="https://www.gatsbyjs.org">
 										<img src={GatsbyIcon} css={{height: '1em'}} />
 									</a>
-								</footer>
+								</footer> */}
 							</div>
 						</>
 					)}
