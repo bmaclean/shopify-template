@@ -45,7 +45,7 @@ const Header = () => {
 			</Box>
 			<Flex mr={100}>
 				<Link
-					to="/"
+					to="/shop"
 					css={{
 						display: 'flex',
 						alignItems: 'center',
