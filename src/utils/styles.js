@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'gatsby-image';
 import styled from '@emotion/styled-base';
 import {Global, css} from '@emotion/core';
-import {Flex} from '@rebass/grid/emotion';
 
 export const GlobalStyle = props => (
 	<Global
