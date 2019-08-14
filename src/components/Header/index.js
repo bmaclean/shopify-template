@@ -20,7 +20,7 @@ const CartCounter = styled.span({
 	zIndex: 999
 });
 
-const Header = () => {
+const Header = ({fixed}) => {
 	const context = useContext(StoreContext);
 
 	const {lineItems} = context.checkout;
@@ -32,9 +32,10 @@ const Header = () => {
 			justifyContent="space-between"
 			width="100%"
 			css={{
-				backgroundColor: 'transparent',
-				height: '200px',
-				position: 'absolute',
+				backgroundColor: fixed ? '#111111' : 'transparent',
+				height: '8em',
+				position: fixed ? 'sticky' : 'absolute',
+				top: 0,
 				zIndex: 10
 			}}
 		>

@@ -31,7 +31,7 @@ export default function SubscriptionInput({...rest}) {
 				/>
 			</Box>
 			<Box width={1 / 4}>
-				<CTAButton>Subscribe</CTAButton>
+				<CTAButton to="/">Subscribe</CTAButton>
 			</Box>
 		</CenteredFlex>
 	);
