@@ -1,7 +1,7 @@
 import React from 'react';
 import {Flex, Box} from '@rebass/grid/emotion';
 
-import {Copy, CTAButton, SEO, SubscriptionInput} from '../components';
+import {Copy, CTAButton, Header, SEO, SubscriptionInput} from '../components';
 
 import BackgroundImage from '../images/xbox-background.png';
 import LogoImage from '../images/styled-background-logo.png';
@@ -9,6 +9,7 @@ import {CenteredFlex} from '../components/ui';
 
 const IndexPage = ({image}) => (
 	<>
+		<Header fixed={false} />
 		<SEO title="Home" keywords={['console style', 'console skins']} />
 		<div
 			css={{

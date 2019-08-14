@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {StaticQuery, graphql} from 'gatsby';
 
 import StoreContext, {defaultStoreContext} from '../context/StoreContext';
-import Header from '../components/Header';
 import {GlobalStyle} from '../utils/styles';
 
 // import GatsbyIcon from '../images/gatsby-icon.png';
 
-class Layout extends React.Component {
+// TODO: convert to functional component
+// use custom hooks to handle some components of state
+
+class Layout extends React.PureComponent {
 	state = {
 		store: {
 			...defaultStoreContext,
@@ -120,7 +122,7 @@ class Layout extends React.Component {
 	}
 
 	render() {
-		const {children} = this.props;
+		const {children, fixHeader} = this.props;
 
 		return (
 			<StoreContext.Provider value={this.state.store}>
@@ -137,7 +139,6 @@ class Layout extends React.Component {
 					`}
 					render={data => (
 						<>
-							<Header siteTitle={data.site.siteMetadata.title} />
 							<div>
 								{children}
 								{/* <footer css={{margin: '8px', textAlign: 'center'}}>
