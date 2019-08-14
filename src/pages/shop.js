@@ -11,6 +11,7 @@ import XboxOneS from '../images/xbox-one-s.png';
 import PS4 from '../images/ps4.png';
 import PS4Slim from '../images/ps4-slim.png';
 import NintendoSwitch from '../images/nintendo-switch.png';
+import Accessory from '../images/controller-grip.png';
 
 const ShopPage = () => {
 	return (
@@ -39,9 +40,7 @@ const ShopPage = () => {
 				<NavBox
 					subpages={[{title: 'Nintendo Switch', image: NintendoSwitch}]}
 				></NavBox>
-				<NavBox
-					subpages={[{title: 'Accessories', image: NintendoSwitch}]}
-				></NavBox>
+				<NavBox subpages={[{title: 'Accessories', image: Accessory}]}></NavBox>
 			</CenteredFlex>
 		</Flex>
 	);
