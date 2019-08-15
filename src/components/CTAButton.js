@@ -1,19 +1,23 @@
+import React from 'react';
 import {Link} from 'gatsby';
 import styled from '@emotion/styled';
+
+import {BlockText} from './ui';
 
 // Call To Action button
 
 // TODO: Themeing
 
-const CTAButton = styled(Link)`
+const StyledLink = ({children, ...rest}) => (
+	<Link {...rest}>
+		<BlockText>{children}</BlockText>
+	</Link>
+);
+
+const CTAButton = styled(StyledLink)`
 	color: #ffffff;
 	background-color: #d71111;
 	padding: 12px 20px;
-	font-family: Montserrat, sans-serif;
-	font-weight: 600;
-	font-style: normal;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
 	font-size: 0.8125em;
 	text-align: center;
 	cursor: pointer;

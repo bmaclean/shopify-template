@@ -1,6 +1,6 @@
 import React from 'react';
 import {Flex, Box} from '@rebass/grid/emotion';
-import {CenteredFlex} from './ui';
+import {BlockText, CenteredFlex} from './ui';
 
 export default function NavBox({image, subpages}) {
 	const [selected, setSelected] = React.useState(subpages[0]);
@@ -28,12 +28,6 @@ export default function NavBox({image, subpages}) {
 							// 	selected.title === subpage.title
 							// 		? 'rgba(255, 255, 255, 0.3)'
 							// 		: '',
-							// TODO: duplicate font styles
-							fontFamily: 'Montserrat, sans-serif',
-							fontWeight: 600,
-							fontStyle: 'normal',
-							letterSpacing: '0.1em',
-							textTransform: 'uppercase',
 							fontSize: '0.8125em',
 							cursor: 'pointer',
 							'&:hover': {
@@ -42,7 +36,7 @@ export default function NavBox({image, subpages}) {
 							}
 						}}
 					>
-						{subpage.title}
+						<BlockText>{subpage.title}</BlockText>
 					</CenteredFlex>
 				))}
 			</Flex>
