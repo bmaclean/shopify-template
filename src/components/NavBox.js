@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import {Flex, Box} from '@rebass/grid/emotion';
-import {CenteredFlex} from './ui';
+import {BlockText, CenteredFlex} from './ui';
 
 // TODO: subpage links should be generated, not explicitly provided
 
@@ -39,13 +39,7 @@ export default function NavBox({image, subpages}) {
 							flex="1"
 							onMouseOver={() => setSelected(subpage)}
 							css={{
-								fontFamily: 'Montserrat, sans-serif',
-								fontWeight: 600,
-								fontStyle: 'normal',
-								letterSpacing: '0.1em',
 								height: '100%',
-								textTransform: 'uppercase',
-								fontSize: '0.8125em',
 								cursor: 'pointer',
 								textDecoration: 'none',
 								'&:hover': {
@@ -54,7 +48,7 @@ export default function NavBox({image, subpages}) {
 								}
 							}}
 						>
-							{subpage.title}
+							<BlockText>{subpage.title}</BlockText>
 						</CenteredFlex>
 					</Link>
 				))}

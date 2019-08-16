@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import {Flex, Box} from '@rebass/grid/emotion';
 
+import {BlockText} from '../ui';
 import StoreContext from '../../context/StoreContext';
 import logo from '../../images/white-logo.png';
 import cart from '../../images/cart.png';
@@ -51,19 +52,15 @@ const Header = ({fixed}) => {
 						display: 'flex',
 						alignItems: 'center',
 						color: 'white',
-						fontFamily: 'Montserrat,sans-serif',
-						fontWeight: 600,
-						letterSpacing: '0.1em',
 						marginRight: '32px',
 						textDecoration: 'none',
-						textTransform: 'uppercase',
 						'&.visited': {
 							color: 'white',
 							textDecoration: 'none'
 						}
 					}}
 				>
-					Shop
+					<BlockText>Shop</BlockText>
 				</Link>
 				<Link to="/cart">
 					<Flex alignItems="center">
