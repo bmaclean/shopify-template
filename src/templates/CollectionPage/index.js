@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function CollectionPage() {
-	return <></>;;
+import {ProductGrid} from '../../components';
+
+export default function CollectionPage({context}) {
+	return <ProductGrid></ProductGrid>;
 }
